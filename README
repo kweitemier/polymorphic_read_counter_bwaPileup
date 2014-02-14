@@ -1,19 +1,30 @@
-### Written by Kevin Weitemier, copyright(c) 2011, version 0.0, 17 Feb 2011
-### This program is free software: you can redistribute it and/or modify it under
-### the terms of the GNU General Public License as published by the Free Software
-### Foundation, either version 3 of the License, or (at your option) any later
-### version. A copy of this license is available at <http://www.gnu.org/licenses/>.
-###     version 0.01 23 Feb 2011 -      made it slightly faster, maybe?
-###     version 1.00b 03 Mar 2011 -     Added ability to handle lines where the consensus differs from the reference.
-###     version 1.01b 09 Mar 2011 -     Fixed a bug when the sequence line contains only Ns.
-###     version 2.00b 11 Apr 2011 -     Reduced memory use, added output fields, fixed bug related to ^$.
-###     version 3.00b 14 Apr 2011 -     Added section displaying the differing reads and their qual scores.
-###     version 3.01b 15 Apr 2011 -     Explicitly undefined variables, which maybe helps memory usage.
-###     version 3.02b 18 Apr 2011 -     Prints a shortened but otherwise unmodified reads line.
-###     version 3.03b 29 Oct 2013 -     Modified to work with mpileup output
-### Purpose: Calculates the proportion of reads at a position
-###     that differ from the majority.
-### Syntax: polymorphic_read_counter_bwaPileup.pl [filename]
-### [filename] must be a file in samtools mpileup format.
-### Output is tab-delimited file with:
-### Name, pileup position, reference base, proportion of non-consensus reads, number of reads, consensus base, differing bases (may be blank), their qual scores (may be blank), all bases, all qual scores.
+Written by Kevin Weitemier, copyright(c) 2011-2013
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version. A copy of this license is distributed with this software and is
+available at <http://www.gnu.org/licenses/>.
+
+Purpose: Calculates the proportion of reads at a position
+    that differ from the majority.
+
+Syntax: polymorphic_read_counter_bwaPileup.pl [filename]
+
+[filename] must be a file in samtools mpileup format.
+
+Output is tab-delimited file with:
+
+Name, pileup position, reference base, proportion of non-consensus reads, number of reads, consensus base, differing bases (may be blank), their qual scores (may be blank), all bases, all qual scores.
+
+
+Version history:
+    version 0.0, 17 Feb 2011
+    version 0.01 23 Feb 2011 -      made it slightly faster, maybe?
+    version 1.00b 03 Mar 2011 -     Added ability to handle lines where the consensus differs from the reference.
+    version 1.01b 09 Mar 2011 -     Fixed a bug when the sequence line contains only Ns.
+    version 2.00b 11 Apr 2011 -     Reduced memory use, added output fields, fixed bug related to ^$.
+    version 3.00b 14 Apr 2011 -     Added section displaying the differing reads and their qual scores.
+    version 3.01b 15 Apr 2011 -     Explicitly undefined variables, which maybe helps memory usage.
+    version 3.02b 18 Apr 2011 -     Prints a shortened but otherwise unmodified reads line.
+    version 3.03b 29 Oct 2013 -     Modified to work with mpileup output
