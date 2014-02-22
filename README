@@ -6,6 +6,10 @@ Foundation, either version 3 of the License, or (at your option) any later
 version. A copy of this license is distributed with this software and is
 available at <http://www.gnu.org/licenses/>.
 
+Great effort has been taken to make this software perform its said
+task. However, this software comes with ABSOLUTELY NO WARRANTY,
+not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
 Purpose: Calculates the proportion of reads at a position
     that differ from the majority.
 
